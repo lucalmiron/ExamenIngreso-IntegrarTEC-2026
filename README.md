@@ -38,16 +38,16 @@ Recibirás la ficha de un personaje de videojuego hecha con HTML malo. Tu tarea 
 El archivo se vincula desde el HTML con `<script src="script.js"></script>`. Verificar resultados en **DevTools → Console**.
 
 **Variables:**
-- Declarar las stats del personaje (nombre, clase, nivel, vida, mana, ataque, defensa) usando `const` o `let` según corresponda. Nunca usar `var`.
+- Declarar las stats del personaje (`name`, `characterClass`, `level`, `health`, `mana`, `attack`, `defense`) usando `const` o `let` según corresponda. Nunca usar `var`.
 
 **Funciones a implementar:**
 
 | Función | Tipo | Qué debe hacer |
 | :--- | :--- | :--- |
-| `calcularDaño(ataque, defensa)` | Declarada | Retornar la diferencia entre ataque y defensa. |
-| `estaVivo` | Arrow function | Recibir `vida`, retornar `true` si es mayor a `0`. |
-| `puedeLanzarHechizo(manaActual, costoHechizo, estaAturdido)` | Arrow function | Retornar `true` solo si hay mana suficiente **y** el personaje no está aturdido. |
-| `obtenerPresentacion(nombre, clase, nivel)` | Declarada | Retornar un string que combine los tres datos. |
+| `calculateDamage(attack, defense)` | Declarada | Retornar la diferencia entre ataque y defensa. <br>• `attack`: valor numérico de ataque del personaje. <br>• `defense`: valor numérico de defensa del enemigo. |
+| `isAlive(health)` | Arrow function | Recibir `health` y retornar `true` si es mayor a `0`. <br>• `health`: puntos de vida actuales del personaje. |
+| `canCastSpell(currentMana, spellCost, isStunned)` | Arrow function | Retornar `true` solo si hay mana suficiente **y** el personaje no está aturdido. <br>• `currentMana`: mana disponible actualmente. <br>• `spellCost`: costo en mana del hechizo a lanzar. <br>• `isStunned`: booleano que indica si el personaje está aturdido. |
+| `getPresentation(name, characterClass, level)` | Declarada | Retornar un string que combine los tres datos. <br>• `name`: nombre del personaje. <br>• `characterClass`: clase del personaje (guerrero, mago, etc.). <br>• `level`: nivel actual del personaje. |
 
 **Resultados:**
 - Llamar a cada función con los valores declarados y mostrar cada resultado con `console.log`.
