@@ -52,8 +52,8 @@ const canCastSpell = (currentMana, cost, stunned) => currentMana >= cost && !stu
  * @param {number} level - Nivel del personaje
  * @returns {string} Presentación formateada
  */
-function getPresentation(name, characterType, level) {
-  return `${name} — ${characterType} (Nivel ${level})`;
+function getPresentation(name, characterClass, level) {
+  return `${name} — ${characterClass} (Nivel ${level})`;
 }
 
 /* =============================================
